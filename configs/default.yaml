@@ -1,0 +1,12 @@
+model:
+  # Ultralytics downloads this lightweight pretrained model on first use.
+  weights: weights/yolo11n.pt
+  device: null       # null = auto, or use "cpu" / 0 for the first CUDA GPU
+  confidence: 0.25
+  iou: 0.70
+  image_size: 640
+  classes: null      # e.g. [0] to track only people (required for MOT17)
+
+tracker:
+  # Built-in Ultralytics ByteTrack defaults. A custom YAML path also works.
+  config: bytetrack.yaml
